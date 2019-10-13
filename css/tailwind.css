@@ -631,6 +631,13 @@ video {
   }
 }
 
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 @media (min-width: 1366.001) {
   html {
     font-size: 20px;
@@ -679,7 +686,7 @@ nav {
   height: 100%;
   display: flex;
   align-items: flex-end;
-  padding-right: 4rem;
+  padding-right: 2rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
   z-index: 50
@@ -746,8 +753,8 @@ nav .nav-section #section-active span {
 main {
   color: #fff;
   padding-top: 3rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 #header {
@@ -779,6 +786,8 @@ main {
 @media (min-width: 1280px) {
   main {
     padding-top: 5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   nav {
@@ -1046,7 +1055,7 @@ main {
       }
 
 #counter {
-  margin-bottom: 32rem;
+  margin-bottom: 48rem;
   position: relative;
   width: 100%;
   display: flex;
@@ -1096,20 +1105,20 @@ main {
   }
 
 #event {
-  width: calc(100% + 5rem);
+  width: calc(100% + 4rem);
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: -2.5rem;
-  margin-right: -2.5rem
+  margin-left: -2rem;
+  margin-right: -2rem
 }
 
 #event .title {
     font-family: Raleway;
     font-size: 3rem;
     letter-spacing: 0.1em;
-    margin-bottom: 10rem;
+    margin-bottom: 14rem;
   }
 
 #event .event-list {
@@ -1217,7 +1226,7 @@ main {
 
 #program {
   margin-top: -26rem;
-  margin-bottom: 60rem;
+  margin-bottom: 80rem;
   width: 100%;
   display: flex;
   flex-direction: column
