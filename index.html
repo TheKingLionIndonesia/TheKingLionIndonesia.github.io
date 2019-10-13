@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Document</title>
+	<title>KingLion Indonesia</title>
 	<link rel="stylesheet" href="./css/glide.core.min.css">
 	<link rel="stylesheet" href="./css/tailwind.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Raleway:700&display=swap" rel="stylesheet">
@@ -208,9 +208,10 @@
 	<script>
 		var rellax = new Rellax('.rellax')
 
-		var myGlide = function (Glide, Components, Events) {
+		var MyGlide = function (Glide, Components, Events) {
 			var lastTilt
-			let njir = {
+
+			let settings = {
 				mount() {
 		      lastTilt = document.querySelector(".glide__slide--active")
 					VanillaTilt.init(lastTilt, {
@@ -230,25 +231,32 @@
 		    		VanillaTilt.init(lastTilt, {
 							scale: 1.1
 						});
-						console.log(lastTilt)
 		    	}
 		    }
 		  }
 
 	    Events.on('run.after', function() {
-	    	njir.newTilt()
+	    	settings.newTilt()
 	    })
 
-		  return njir
+		  return settings
 		}
 
 		var glide = new Glide('.glide', {
 			type: 'carousel',
-			startAt: 0,
-			perView: 2,
+			perView: 3,
 			gap: 0,
-			peek: 40
-		}).mount({myGlide})
+			peek: 60,
+			breakpoints: {
+				1440: {
+					perView: 2,
+					peek: 40
+				},
+				900: {
+					perView: 1
+				}
+			}
+		}).mount({MyGlide})
 	</script>
 </body>
 </html>

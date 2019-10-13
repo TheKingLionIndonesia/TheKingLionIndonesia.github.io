@@ -631,6 +631,12 @@ video {
   }
 }
 
+@media (min-width: 1366.001) {
+  html {
+    font-size: 20px;
+  }
+}
+
 body {
   font-family: Open Sans;
   background-color: #000;
@@ -673,9 +679,9 @@ nav {
   height: 100%;
   display: flex;
   align-items: flex-end;
-  padding-right: 3rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-right: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   z-index: 50
 }
 
@@ -739,7 +745,7 @@ nav .nav-section #section-active span {
 
 main {
   color: #fff;
-  padding-top: 5rem;
+  padding-top: 3rem;
   padding-left: 3rem;
   padding-right: 3rem;
 }
@@ -756,50 +762,231 @@ main {
 }
 
 #brand img {
-    width: 6rem;
+    width: 5rem;
   }
 
 #brand-name {
-  text-shadow: 4px 0px 16px rgba(0,0,0,.2);
+  text-shadow: 4px 0px 16px rgba(0, 0, 0, 0.2);
   font-family: Raleway;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   line-height: 1.25;
-  font-size: 8rem;
+  font-size: 3rem;
   font-weight: 700;
   margin-top: 3rem;
 }
 
+@media (min-width: 1280px) {
+  main {
+    padding-top: 5rem;
+  }
+
+  nav {
+    padding-right: 3rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+    #brand img {
+      width: 6rem;
+    }
+
+  #brand-name {
+    font-size: 8rem;
+  }
+
+  #brand-desc {
+    font-size: 1.875rem;
+  }
+
+  .brand-background {
+    transform: perspective(500px) rotateX(-0.68deg) rotateY(-11.5deg)
+			scale3d(1, 1, 1);
+    position: absolute
+  }
+    .brand-background::before {
+      content: '';
+      display: block;
+      right: -1rem;
+      bottom: 1rem;
+      height: 100%;
+      transform: perspective(500px) rotateX(-0.68deg) rotateY(-11.5deg)
+				scale3d(1, 1, 1);
+      position: absolute;
+      width: 100%;
+      border-width: 4px;
+      border-color: #fff;
+    }
+    .brand-background img {
+      width: 32rem;
+      height: auto;
+    }
+
+  #profile {
+    align-items: flex-end
+  }
+    #profile .title {
+      font-size: 3rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin-right: 6rem;
+    }
+    #profile::before {
+      content: '';
+      top: 2rem;
+      right: 4rem;
+      z-index: -1;
+      position: absolute;
+      display: block;
+      width: 75%;
+      height: 100%;
+      border-width: 4px;
+      border-color: #fff;
+    }
+    #profile .content {
+      flex-direction: row;
+      padding-right: 3rem
+    }
+      #profile .content .photo {
+        height: 20rem;
+        transform: perspective(700px) rotateX(0.68deg) rotateY(11.5deg)
+					scale3d(1, 1, 1);
+        width: 50%;
+        padding-left: 1rem;
+        margin-bottom: 0
+      }
+        #profile .content .photo img {
+          height: 32rem;
+        }
+      #profile .content .desc {
+        width: 50%;
+        justify-content: space-between;
+        padding-left: 2rem;
+        padding-right: 5rem
+      }
+        #profile .content .desc .text {
+          margin-bottom: 0;
+        }
+
+  #counter {
+    margin-bottom: 26rem
+  }
+    #counter .counter-list {
+      flex-direction: row;
+      justify-content: space-around
+    }
+      #counter .counter-list .counter-item {
+        margin-bottom: 0;
+      }
+
+  #event {
+    width: 100%;
+    align-items: flex-start;
+    margin-left: 0;
+    margin-right: 0
+  }
+    #event .title {
+      background-color: #000;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      margin-bottom: 8rem;
+      margin-left: 3rem;
+    }
+    #event::before {
+      content: '';
+      top: 2rem;
+      height: 20rem;
+      z-index: -1;
+      position: absolute;
+      width: 75%;
+      display: block;
+      border-width: 4px;
+      border-color: #fff;
+    }
+    #event .event-list {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+    #event .glide {
+      z-index: -1
+    }
+      #event .glide .glide__slides {
+        padding-top: 2.5rem;
+      }
+          #event .glide .glide__slide.glide__slide--active .event-desc {
+            margin-right: -32rem;
+          }
+
+  #program {
+    margin-bottom: 46rem
+  }
+    #program .program-list {
+      flex-direction: row;
+    }
+    #program .program-item {
+      width: 50%;
+      padding-right: 5rem;
+      margin-bottom: 0
+    }
+      #program .program-item h1 {
+        margin-bottom: 2rem;
+      }
+
+  #merchandise {
+    align-items: flex-end;
+    padding-right: 5rem
+  }
+    #merchandise::before {
+      content: '';
+      width: 90%;
+      height: 80%;
+      z-index: -1;
+      position: absolute;
+      display: block;
+      border-width: 4px;
+      border-color: #fff;
+      margin-top: 2.5rem;
+    }
+    #merchandise .title {
+      background-color: #000;
+      text-align: right;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      margin-right: 2rem;
+      margin-bottom: 0;
+    }
+      #merchandise .merchandise-list .merchandise-item {
+        width: 33.333333%;
+        height: 16rem;
+        padding: 2rem;
+        margin-bottom: 0
+      }
+        #merchandise .merchandise-list .merchandise-item:nth-child(n + 2) {
+          display: block;
+        }
+}
+
 #brand-desc {
-  text-shadow: 4px 0px 16px rgba(0,0,0,.2);
-  font-size: 1.875rem;
+  text-shadow: 4px 0px 16px rgba(0, 0, 0, 0.2);
+  font-size: 1.25rem;
   letter-spacing: 0.1em;
   margin-bottom: 2rem;
 }
 
 .brand-background {
   top: 4rem;
-  left: 18rem;
+  left: 6.7rem;
   z-index: -1;
-  position: absolute
+  position: static
 }
 
 .brand-background img {
-    transform: perspective(500px) rotateX(-0.68deg) rotateY(-11.5deg) scale3d(1 , 1, 1);
-    width: 32rem;
-  }
-
-.brand-background::before {
-    content: '';
-    display: block;
-    right: -4rem;
-    bottom: -2rem;
-    height: 21rem;
-    transform: perspective(500px) rotateX(-0.68deg) rotateY(-11.5deg) scale3d(1 , 1, 1);
-    position: absolute;
-    width: 32rem;
-    border-width: 4px;
-    border-color: #fff;
+    width: 100%;
+    height: 12rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin-bottom: 2rem;
   }
 
 #profile {
@@ -807,31 +994,15 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   margin-bottom: 3rem
 }
 
-#profile::before {
-    content: '';
-    top: 2rem;
-    right: 4rem;
-    z-index: -1;
-    position: absolute;
-    display: block;
-    width: 75%;
-    height: 100%;
-    border-width: 4px;
-    border-color: #fff;
-  }
-
 #profile .title {
     font-family: Raleway;
-    font-size: 3rem;
+    font-size: 2.25rem;
     letter-spacing: 0.1em;
     text-align: right;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    margin-right: 6rem;
     margin-bottom: 2rem;
     background-color: #000;
   }
@@ -839,46 +1010,43 @@ main {
 #profile .content {
     width: 100%;
     display: flex;
-    flex-direction: row;
-    padding-right: 3rem
+    flex-direction: column
   }
 
 #profile .content .photo {
-      transform: perspective(700px) rotateX(0.68deg) rotateY(11.5deg) scale3d(1 , 1, 1);
-      height: 20rem;
+      height: 12rem;
       position: relative;
-      width: 50%;
+      width: 100%;
       overflow: hidden;
-      padding-left: 1rem
+      margin-bottom: 2rem
     }
 
 #profile .content .photo img {
+        height: 20rem;
         width: 100%;
-        height: 32rem;
         -o-object-fit: cover;
            object-fit: cover;
         -o-object-position: bottom;
            object-position: bottom;
+        margin-bottom: 1rem;
       }
 
 #profile .content .desc {
-      width: 50%;
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      justify-content: space-between;
-      padding-left: 2rem;
-      padding-right: 5rem;
       padding-bottom: 1.25rem
     }
 
 #profile .content .desc .text {
         font-size: 1.25rem;
         text-align: justify;
+        margin-bottom: 2rem;
       }
 
 #counter {
-  margin-bottom: 26rem;
+  margin-bottom: 32rem;
   position: relative;
   width: 100%;
   display: flex;
@@ -895,15 +1063,15 @@ main {
 #counter .counter-list {
     width: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around
+    flex-direction: column;
+    align-items: center
   }
 
 #counter .counter-list .counter-item {
       display: flex;
       flex-direction: column;
-      align-items: center
+      align-items: center;
+      margin-bottom: 2.5rem
     }
 
 #counter .counter-list .counter-item p {
@@ -918,50 +1086,36 @@ main {
       }
 
 #counter .circle {
-    background-color: rgba(255,255,255,.08);
+    background-color: rgba(255, 255, 255, 0.08);
     top: -26rem;
     z-index: -1;
+    width: 80vw;
+    height: 80vw;
     position: absolute;
-    width: 32rem;
-    height: 32rem;
     border-radius: 9999px;
   }
 
 #event {
+  width: calc(100% + 5rem);
   position: relative;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start
+  align-items: center;
+  margin-left: -2.5rem;
+  margin-right: -2.5rem
 }
-
-#event::before {
-    content: '';
-    top: 2rem;
-    height: 20rem;
-    z-index: -1;
-    position: absolute;
-    width: 75%;
-    display: block;
-    border-width: 4px;
-    border-color: #fff;
-  }
 
 #event .title {
     font-family: Raleway;
     font-size: 3rem;
-    background-color: #000;
     letter-spacing: 0.1em;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    margin-bottom: 8rem;
-    margin-left: 3rem;
+    margin-bottom: 10rem;
   }
 
 #event .event-list {
     width: 100%;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left: 0;
+    padding-right: 0;
     cursor: -webkit-grab;
     cursor: grab;
   }
@@ -986,7 +1140,7 @@ main {
       }
 
 #event .glide .glide__slide .event-desc {
-        transition: .5s;
+        transition: 0.5s;
         opacity: 0;
       }
 
@@ -1000,7 +1154,7 @@ main {
 
 #event .glide .glide__slide.glide__slide--active::before {
           content: '';
-          background-color: rgba(0,0,0,.05);
+          background-color: rgba(0, 0, 0, 0.05);
           position: absolute;
           display: block;
           width: 100%;
@@ -1019,14 +1173,13 @@ main {
           margin-left: auto;
           margin-right: auto;
           padding: 1.5rem;
-          margin-top: -5rem;
           z-index: 10;
-          margin-right: -32rem;
+          margin-right: 0;
           margin-top: -10rem
         }
 
 #event .glide .glide__slide.glide__slide--active .event-desc .text {
-            background-color: rgba(0,0,0,.6);
+            background-color: rgba(0, 0, 0, 0.6);
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -1064,7 +1217,7 @@ main {
 
 #program {
   margin-top: -26rem;
-  margin-bottom: 46rem;
+  margin-bottom: 60rem;
   width: 100%;
   display: flex;
   flex-direction: column
@@ -1081,15 +1234,14 @@ main {
 #program .program-list {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
 
 #program .program-item {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    padding-right: 5rem;
-    margin-bottom: 2rem
+    margin-bottom: 3rem
   }
 
 #program .program-item h1 {
@@ -1097,7 +1249,7 @@ main {
       text-transform: uppercase;
       font-size: 1.125rem;
       opacity: 0.5;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
 
 #program .program-item p {
@@ -1109,32 +1261,15 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  padding-right: 5rem;
+  align-items: center;
   position: relative
 }
-
-#merchandise::before {
-    content: '';
-    width: 90%;
-    height: 80%;
-    z-index: -1;
-    position: absolute;
-    display: block;
-    border-width: 4px;
-    border-color: #fff;
-    margin-top: 2.5rem;
-  }
 
 #merchandise .title {
     font-family: Raleway;
     font-size: 3rem;
-    background-color: #000;
     letter-spacing: 0.1em;
-    text-align: right;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    margin-right: 2rem;
+    margin-bottom: 2rem;
   }
 
 #merchandise .merchandise-list {
@@ -1145,9 +1280,9 @@ main {
   }
 
 #merchandise .merchandise-list .merchandise-item {
-      width: 33.333333%;
-      height: 16rem;
-      padding: 2rem
+      width: 100%;
+      height: 12rem;
+      margin-bottom: 1rem
     }
 
 #merchandise .merchandise-list .merchandise-item img {
@@ -1157,6 +1292,10 @@ main {
            object-fit: cover;
         -o-object-position: center;
            object-position: center;
+      }
+
+#merchandise .merchandise-list .merchandise-item:nth-child(n + 2) {
+        display: none;
       }
 
 .sr-only {
