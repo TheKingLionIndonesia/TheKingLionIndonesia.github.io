@@ -959,6 +959,7 @@ main {
     }
     #merchandise .title {
       background-color: #000;
+      font-size: 3rem;
       text-align: right;
       padding-left: 2rem;
       padding-right: 2rem;
@@ -1118,7 +1119,7 @@ main {
     font-family: Raleway;
     font-size: 3rem;
     letter-spacing: 0.1em;
-    margin-bottom: 14rem;
+    margin-bottom: 16rem;
   }
 
 #event .event-list {
@@ -1276,7 +1277,7 @@ main {
 
 #merchandise .title {
     font-family: Raleway;
-    font-size: 3rem;
+    font-size: 2.25rem;
     letter-spacing: 0.1em;
     margin-bottom: 2rem;
   }

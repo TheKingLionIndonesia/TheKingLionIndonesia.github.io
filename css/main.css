@@ -248,7 +248,7 @@ main {
 			}
 		}
 	}
-
+	
 	#merchandise {
 		@apply items-end pr-20;
 
@@ -261,7 +261,7 @@ main {
 		}
 
 		& .title {
-			@apply bg-black text-right px-8 mr-8 mb-0;
+			@apply bg-black text-5xl text-right px-8 mr-8 mb-0;
 		}
 
 		& .merchandise-list {
@@ -361,7 +361,7 @@ main {
 	@apply relative flex flex-col items-center -mx-8;
 
 	& .title {
-		@apply font-title text-5xl tracking-widest mb-56;
+		@apply font-title text-5xl tracking-widest mb-64;
 	}
 
 	& .event-list {
@@ -467,7 +467,7 @@ main {
 	@apply w-full flex flex-col items-center relative;
 
 	& .title {
-		@apply font-title text-5xl tracking-widest mb-8;
+		@apply font-title text-4xl tracking-widest mb-8;
 	}
 
 	& .merchandise-list {
