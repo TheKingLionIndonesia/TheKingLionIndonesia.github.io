@@ -925,7 +925,11 @@ main {
       }
           #event .glide .glide__slide.glide__slide--active .event-desc {
             margin-right: -32rem;
+            margin-top: -10rem
           }
+              #event .glide .glide__slide.glide__slide--active .event-desc .text h1 {
+                font-size: 1.875rem;
+              }
 
   #program {
     margin-bottom: 46rem
@@ -1177,6 +1181,7 @@ main {
 
 #event .glide .glide__slide.glide__slide--active .event-desc {
           transform: translateZ(20px);
+          margin-top: -5rem;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -1184,8 +1189,7 @@ main {
           margin-right: auto;
           padding: 1.5rem;
           z-index: 10;
-          margin-right: 0;
-          margin-top: -10rem
+          margin-right: 0
         }
 
 #event .glide .glide__slide.glide__slide--active .event-desc .text {
@@ -1202,7 +1206,7 @@ main {
 
 #event .glide .glide__slide.glide__slide--active .event-desc .text h1 {
               font-family: Raleway;
-              font-size: 1.875rem;
+              font-size: 1.25rem;
               text-transform: uppercase;
               margin-bottom: 0.5rem;
             }

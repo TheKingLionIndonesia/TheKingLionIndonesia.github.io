@@ -226,7 +226,13 @@ main {
 			& .glide__slide {
 				&.glide__slide--active {
 					& .event-desc {
-						@apply -mr-128;
+						@apply -mr-128 -mt-40;
+
+						& .text {
+							& h1 {
+								@apply text-3xl;
+							}
+						}
 					}
 				}
 			}
@@ -248,7 +254,7 @@ main {
 			}
 		}
 	}
-	
+
 	#merchandise {
 		@apply items-end pr-20;
 
@@ -404,14 +410,15 @@ main {
 
 				& .event-desc {
 					transform: translateZ(20px);
-					@apply flex flex-col items-center mx-auto p-6 z-10 mr-0 -mt-40;
+					margin-top: -5rem;
+					@apply flex flex-col items-center mx-auto p-6 z-10 mr-0;
 
 					& .text {
 						background-color: rgba(0, 0, 0, 0.6);
 						@apply flex flex-col items-start py-3 px-8 max-w-md;
 
 						& h1 {
-							@apply font-title text-3xl uppercase mb-2;
+							@apply font-title text-xl uppercase mb-2;
 						}
 
 						& p {
