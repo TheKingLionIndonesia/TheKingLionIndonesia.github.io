@@ -1,0 +1,101 @@
+@screen xl {
+	nav {
+		padding-right: 4.5vw;
+		
+		& .nav-btn {
+	    width: 3vw;
+    	height: 1.5vw;
+		}
+
+		& .nav-section {
+			& #section-active {
+				font-size: 1.6vw;
+				@apply py-6;
+
+				& span {
+					font-size: 2.2vw;
+				}
+			}
+
+			& button {
+				& svg {
+					transform: scale(2);
+				}
+			}
+		}
+	}
+
+	#brand-name {
+		margin-top: 10vh;
+	}
+
+	.brand-background {
+		top: 13vh;
+		left: 21vw;
+
+		&::before {
+			right: -4rem;
+			height: 104%;
+		}
+
+		& img {
+			width: 46vw;
+		}
+	}
+
+	#profile {
+		& .content {
+			& .photo {
+				height: 50vh;
+
+				& img {
+					height: 68vh;
+				}
+			}
+		}
+	}
+
+	#event {
+		&::before {
+			height: 54vh;
+		}
+
+		& .title {
+			margin-bottom: 20vh;
+		}
+
+		& .glide {
+			& .glide__slide {
+				padding: 8vh 0;
+			}
+		}
+	}
+
+	#program {
+		margin-top: -32vh;
+		margin-bottom: 130vh;
+
+		& .program-item {
+			@apply px-20;
+
+			& h1 {
+				font-size: 2vw;
+			}
+
+			& p {
+				font-size: 2vw;
+			}
+		}
+	}
+
+	#merchandise {
+		& .title {
+			font-size: 4vw;
+		}
+
+		& .merchandise-list {
+			& .merchandise-item {
+			}
+		}
+	}
+}

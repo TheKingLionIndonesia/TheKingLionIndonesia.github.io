@@ -1,0 +1,45 @@
+@screen lg {
+	#about {
+		& #profile { 
+			margin-top: -1.1rem;
+			@apply mb-0;
+
+			& .content {
+				transition: 1s;
+			
+				& .photo {
+					transition: 1s;
+				
+					img {
+						transition: 1s;
+					}
+				}
+			}
+		}
+
+		& header {
+			@apply w-full flex flex-row;
+		}
+
+		& .about-photo {
+			@apply w-1/2 h-screen pr-12;
+
+			& img {
+				@apply w-full h-full object-cover;
+			}
+		}
+
+		& .about-main {
+			@apply w-1/2 flex flex-col pr-32 pt-20;
+
+			& .title {
+				font-size: 4vw;
+				@apply font-title tracking-widest mb-8;
+			}
+			& .text {
+				font-size: 1.7vw;
+				@apply text-justify mb-6;
+			}
+		}
+	}
+}
