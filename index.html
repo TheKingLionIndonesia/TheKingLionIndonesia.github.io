@@ -59,7 +59,7 @@
 				</div>
 				<div class="desc">
 					<p class="text">
-						Kami adalah perusahaan di Indonesia yang bergerak di bidang Event Organizing. Perusahaan kami didirikan oleh Ari Gusrizal pada tahun 20XX dengan tujuan berkontribusi mengembangkan talenta generasi muda melalui program yang ditawarkan.
+						Kami adalah perusahaan di Indonesia yang bergerak di bidang Event Organizing. Perusahaan kami didirikan oleh Ari Gusrizal pada tahun 2018 dengan tujuan berkontribusi mengembangkan talenta generasi muda melalui program yang ditawarkan.
 					</p>
 					<a href="./about.html" class="btn">Tentang kami</a>
 				</div>
@@ -165,8 +165,8 @@
 	<script src="./js/vanilla-tilt.min.js"></script>
 	<script src="./js/smscroll.js"></script>
 	<script src="./js/anime.min.js"></script>
-	<script src="https://unpkg.com/@barba/core"></script>
-	<script src="./js/transition.js"></script>
+	<<!-- script src="https://unpkg.com/@barba/core"></script>
+	<script src="./js/transition.js"></script> -->
 	<script>
 		var rellax = new Rellax('.rellax')
 
@@ -208,13 +208,17 @@
 			type: 'carousel',
 			perView: 2,
 			gap: 0,
-			peek: 100,
+			peek: 120,
 			breakpoints: {
 				1440: {
-					peek: 120
+					peek: 110
 				},
 				900: {
-					perView: 1
+					perView: 1,
+					peek: 50
+				},
+				600: {
+					peek: 30
 				}
 			}
 		}).mount({MyGlide})

@@ -1,0 +1,11 @@
+@screen md {
+	#event {
+		& .glide {
+			& .glide__slide {
+				& .event-title {
+					font-size: 4.5vw;
+				}
+			}
+		}
+	}
+}

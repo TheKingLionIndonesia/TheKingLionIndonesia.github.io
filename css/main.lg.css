@@ -157,14 +157,8 @@
 
 			& .glide__slide {
 				&.glide__slide--active {
-					& .event-desc {
-						@apply -mr-128 -mt-40;
-
-						& .text {
-							& h1 {
-								@apply text-3xl;
-							}
-						}
+					& .event-title {
+						font-size: 2.25vw;
 					}
 				}
 			}

@@ -4,6 +4,8 @@
 
 @import "main.base.css";
 
+@import "main.md.css";
+
 @import "main.lg.css";
 
 @import "main.xl.css";

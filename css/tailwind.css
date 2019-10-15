@@ -966,7 +966,7 @@ main {
   text-shadow: 4px 0px 16px rgba(0, 0, 0, 0.5), -4px 0px 16px rgba(0, 0, 0, 0.5);
   top: 50%;
   transform: translateY(-50%) translateZ(50px);
-  font-size: 2.25vw;
+  font-size: 7.5vw;
   position: absolute;
   width: 100%;
   font-family: Raleway;
@@ -1006,7 +1006,7 @@ main {
 
 #program {
   margin-top: -26rem;
-  margin-bottom:180vh;
+  margin-bottom: 200vh;
   width: 100%;
   display: flex;
   flex-direction: column
@@ -1090,6 +1090,12 @@ main {
 
 #merchandise .merchandise-list .merchandise-item:nth-child(n + 2) {
   display: none;
+}
+
+@media (min-width: 768px) {
+  #event .glide .glide__slide .event-title {
+    font-size: 4.5vw;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1275,13 +1281,8 @@ main {
     padding-top: 2.5rem;
   }
 
-  #event .glide .glide__slide.glide__slide--active .event-desc {
-    margin-right: -32rem;
-    margin-top: -10rem
-  }
-
-  #event .glide .glide__slide.glide__slide--active .event-desc .text h1 {
-    font-size: 1.875rem;
+  #event .glide .glide__slide.glide__slide--active .event-title {
+    font-size: 2.25vw;
   }
 
   #program {

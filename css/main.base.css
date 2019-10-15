@@ -214,7 +214,7 @@ main {
 				text-shadow: 4px 0px 16px rgba(0, 0, 0, 0.5), -4px 0px 16px rgba(0, 0, 0, 0.5);
 				top: 50%;
 				transform: translateY(-50%) translateZ(50px);
-				font-size: 2.25vw;
+				font-size: 7.5vw;
 				@apply absolute w-full font-title uppercase text-center;
 			}
 
@@ -246,7 +246,7 @@ main {
 
 #program {
 	margin-top: -26rem;
-	margin-bottom:180vh;
+	margin-bottom: 200vh;
 	@apply w-full flex flex-col;
 
 	& .title {
