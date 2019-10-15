@@ -647,6 +647,11 @@ body {
   background-color: #000;
 }
 
+main {
+  height: 650vh;
+  overflow: hidden;
+}
+
 .btn {
   position: relative;
   display: flex;
@@ -1468,7 +1473,7 @@ main {
   }
 
   #profile .content .photo img {
-    height: 68vh;
+    height: 80vh;
   }
 
   #event::before {
