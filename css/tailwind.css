@@ -934,10 +934,10 @@ main {
 }
 
 #event .title {
+  margin-bottom: 40vh;
   font-family: Raleway;
   font-size: 3rem;
   letter-spacing: 0.1em;
-  margin-bottom: 16rem;
 }
 
 #event .event-list {
@@ -1006,7 +1006,7 @@ main {
 
 #program {
   margin-top: -26rem;
-  margin-bottom: 200vh;
+  margin-bottom: 230vh;
   width: 100%;
   display: flex;
   flex-direction: column
@@ -1093,6 +1093,18 @@ main {
 }
 
 @media (min-width: 768px) {
+  .brand-background img {
+    height: 32vh;
+  }
+
+  #profile .content .photo {
+    height: 32vh
+  }
+
+  #profile .content .photo img {
+    height: 50vh;
+  }
+
   #event .glide .glide__slide .event-title {
     font-size: 4.5vw;
   }

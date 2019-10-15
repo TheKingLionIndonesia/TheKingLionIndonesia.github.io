@@ -1,4 +1,22 @@
 @screen md {
+	.brand-background {
+		& img {
+			height: 32vh;
+		}
+	}
+
+	#profile {
+		& .content {
+			& .photo {
+				height: 32vh;
+
+				& img {
+					height: 50vh;
+				}
+			}
+		}
+	}
+
 	#event {
 		& .glide {
 			& .glide__slide {
