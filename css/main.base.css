@@ -9,12 +9,6 @@
   overflow: hidden;
 }
 
-@media (width > 1366) {
-	html {
-		font-size: 20px;
-	}
-}
-
 body {
 	@apply font-body bg-black;
 }
@@ -45,25 +39,60 @@ nav {
 
 	& .nav-btn {
 		font-size: 0;
-		@apply relative w-8 h-4 outline-none;
+		@apply relative w-8 h-4 outline-none z-50;
 
 		&:matches(::before, ::after) {
 			content: '';
 			height: 0.15rem;
-			@apply absolute block w-full bg-white;
+			transition: .5s;
+			@apply absolute block w-full;
 		}
 
-		&::before {
-			@apply top-0;
+		&:not(.active) {
+			&:matches(::before, ::after) {
+				@apply bg-white;
+			}
+
+			&::before {
+				@apply top-0;
+			}
+
+			&::after {
+				@apply bottom-0;
+			}
 		}
 
-		&::after {
-			@apply bottom-0;
+		&.active {
+			&:matches(::before, ::after) {
+				@apply bg-black;
+			}
+
+			&::before {
+				top: 50%;
+				transform: translateY(-50%) rotate(45deg);
+			}
+
+			&::after {
+				bottom: 50%;
+				transform: translateY(50%) rotate(-45deg);
+			}
+
+			& ~ .nav-menu {
+				padding: 12vh 0 8vh 0;
+				@apply h-full;
+			}
 		}
 	}
 
 	& .nav-menu {
-		@apply hidden;
+		transition: 0.75s;
+		@apply fixed top-0 left-0 w-full h-0 flex flex-col flex-wrap bg-white overflow-auto z-40;
+
+		& a {
+			font-size: 7vw;
+			margin-bottom: 4vh;
+			@apply hidden opacity-0;
+		}
 	}
 
 	& .nav-section {
@@ -251,7 +280,7 @@ main {
 	@apply w-full flex flex-col;
 
 	& .title {
-		@apply font-title text-4xl text-center mb-12 z-50;
+		@apply font-title text-4xl text-center mb-12 z-30;
 	}
 
 	& .program-list {

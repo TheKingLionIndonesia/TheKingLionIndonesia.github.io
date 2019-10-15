@@ -1,4 +1,12 @@
 @screen md {
+	nav {
+		& .nav-menu {
+			& a {
+				font-size: 5.5vw;
+			}
+		}
+	}
+
 	.brand-background {
 		& img {
 			height: 32vh;

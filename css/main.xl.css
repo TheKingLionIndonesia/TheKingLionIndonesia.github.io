@@ -73,7 +73,11 @@
 
 	#program {
 		margin-top: -32vh;
-		margin-bottom: 130vh;
+		margin-bottom: 180vh;
+
+		& .title {
+			margin-bottom: 10vh;
+		}
 
 		& .program-item {
 			@apply px-20;
@@ -83,7 +87,8 @@
 			}
 
 			& p {
-				font-size: 2vw;
+				font-size: 1.6vw;
+				line-height: 3.2vw;
 			}
 		}
 	}

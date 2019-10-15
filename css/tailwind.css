@@ -642,12 +642,6 @@ video {
   overflow: hidden;
 }
 
-@media (min-width: 1366.001) {
-  html {
-    font-size: 20px;
-  }
-}
-
 body {
   font-family: Open Sans;
   background-color: #000;
@@ -709,28 +703,70 @@ nav .nav-btn {
   position: relative;
   width: 2rem;
   height: 1rem;
-  outline: 0
+  outline: 0;
+  z-index: 50
 }
 
 nav .nav-btn::before, nav .nav-btn::after {
   content: '';
   height: 0.15rem;
+  transition: .5s;
   position: absolute;
   display: block;
   width: 100%;
+}
+
+nav .nav-btn:not(.active)::before, nav .nav-btn:not(.active)::after {
   background-color: #fff;
 }
 
-nav .nav-btn::before {
+nav .nav-btn:not(.active)::before {
   top: 0;
 }
 
-nav .nav-btn::after {
+nav .nav-btn:not(.active)::after {
   bottom: 0;
 }
 
+nav .nav-btn.active::before, nav .nav-btn.active::after {
+  background-color: #000;
+}
+
+nav .nav-btn.active::before {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+nav .nav-btn.active::after {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+nav .nav-btn.active ~ .nav-menu {
+  padding: 12vh 0 8vh 0;
+  height: 100%;
+}
+
 nav .nav-menu {
+  transition: 0.75s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #fff;
+  overflow: auto;
+  z-index: 40
+}
+
+nav .nav-menu a {
+  font-size: 7vw;
+  margin-bottom: 4vh;
   display: none;
+  opacity: 0;
 }
 
 nav .nav-section {
@@ -1017,7 +1053,7 @@ main {
   font-size: 2.25rem;
   text-align: center;
   margin-bottom: 3rem;
-  z-index: 50;
+  z-index: 30;
 }
 
 #program .program-list {
@@ -1093,6 +1129,10 @@ main {
 }
 
 @media (min-width: 768px) {
+  nav .nav-menu a {
+    font-size: 5.5vw;
+  }
+
   .brand-background img {
     height: 32vh;
   }
@@ -1124,7 +1164,11 @@ main {
   nav {
     padding-right: 3rem;
     padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-bottom: 5rem
+  }
+
+  nav .nav-menu a {
+    font-size: 4vw;
   }
 
   #header {
@@ -1222,11 +1266,12 @@ main {
 
   #profile .content .desc .text {
     font-size: 1.7vw;
+    line-height: 2.8vw;
     margin-bottom: 4rem;
   }
 
   #counter {
-    margin-bottom: 75vh
+    margin-bottom: 96vh
   }
 
   #counter .title {
@@ -1278,7 +1323,7 @@ main {
 
   #event .title {
     font-size: 4vw;
-    margin-bottom: 24vh;
+    margin-bottom: 30vh;
     margin-left: 8vw;
     background-color: #000;
     padding-left: 1.5rem;
@@ -1327,7 +1372,7 @@ main {
   }
 
   #program .program-item .btn {
-    margin-top: auto;
+    margin-top: 4vh;
   }
 
   #merchandise {
@@ -1440,7 +1485,11 @@ main {
 
   #program {
     margin-top: -32vh;
-    margin-bottom: 130vh
+    margin-bottom: 180vh
+  }
+
+  #program .title {
+    margin-bottom: 10vh;
   }
 
   #program .program-item {
@@ -1453,7 +1502,8 @@ main {
   }
 
   #program .program-item p {
-    font-size: 2vw;
+    font-size: 1.6vw;
+    line-height: 3.2vw;
   }
 
   #merchandise .title {
