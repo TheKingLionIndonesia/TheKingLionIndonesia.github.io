@@ -647,11 +647,6 @@ body {
   background-color: #000;
 }
 
-main {
-  height: 650vh;
-  overflow: hidden;
-}
-
 .btn {
   position: relative;
   display: flex;
